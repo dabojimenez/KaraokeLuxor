@@ -1,0 +1,9 @@
+C:\Users\David\source\repos\KaraokeDesktop\bin\Debug\KaraokeDesktop.exe
+C:\Users\David\source\repos\KaraokeDesktop\bin\Debug\KaraokeDesktop.pdb
+C:\Users\David\source\repos\KaraokeDesktop\obj\Debug\KaraokeDesktop.csproj.AssemblyReference.cache
+C:\Users\David\source\repos\KaraokeDesktop\obj\Debug\KaraokeDesktop.MenuPrincipal.resources
+C:\Users\David\source\repos\KaraokeDesktop\obj\Debug\KaraokeDesktop.Properties.Resources.resources
+C:\Users\David\source\repos\KaraokeDesktop\obj\Debug\KaraokeDesktop.csproj.GenerateResource.cache
+C:\Users\David\source\repos\KaraokeDesktop\obj\Debug\KaraokeDesktop.csproj.CoreCompileInputs.cache
+C:\Users\David\source\repos\KaraokeDesktop\obj\Debug\KaraokeDesktop.exe
+C:\Users\David\source\repos\KaraokeDesktop\obj\Debug\KaraokeDesktop.pdb
