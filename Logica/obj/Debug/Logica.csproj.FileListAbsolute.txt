@@ -1,0 +1,6 @@
+C:\Users\David\source\repos\KaraokeDesktop\Logica\bin\Debug\Logica.dll
+C:\Users\David\source\repos\KaraokeDesktop\Logica\bin\Debug\Logica.pdb
+C:\Users\David\source\repos\KaraokeDesktop\Logica\obj\Debug\Logica.csproj.AssemblyReference.cache
+C:\Users\David\source\repos\KaraokeDesktop\Logica\obj\Debug\Logica.csproj.CoreCompileInputs.cache
+C:\Users\David\source\repos\KaraokeDesktop\Logica\obj\Debug\Logica.dll
+C:\Users\David\source\repos\KaraokeDesktop\Logica\obj\Debug\Logica.pdb

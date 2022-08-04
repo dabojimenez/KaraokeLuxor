@@ -1,0 +1,9 @@
+C:\Users\David\source\repos\KaraokeDesktop\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+C:\Users\David\source\repos\KaraokeDesktop\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\David\source\repos\KaraokeDesktop\Datos\bin\Debug\Datos.dll
+C:\Users\David\source\repos\KaraokeDesktop\Datos\bin\Debug\Datos.pdb
+C:\Users\David\source\repos\KaraokeDesktop\Datos\bin\Debug\Logica.dll
+C:\Users\David\source\repos\KaraokeDesktop\Datos\bin\Debug\Logica.pdb
+C:\Users\David\source\repos\KaraokeDesktop\Datos\obj\Debug\Datos.csproj.CopyComplete
+C:\Users\David\source\repos\KaraokeDesktop\Datos\obj\Debug\Datos.dll
+C:\Users\David\source\repos\KaraokeDesktop\Datos\obj\Debug\Datos.pdb
