@@ -7,3 +7,9 @@ C:\Users\David\source\repos\KaraokeDesktop\obj\Debug\KaraokeDesktop.csproj.Gener
 C:\Users\David\source\repos\KaraokeDesktop\obj\Debug\KaraokeDesktop.csproj.CoreCompileInputs.cache
 C:\Users\David\source\repos\KaraokeDesktop\obj\Debug\KaraokeDesktop.exe
 C:\Users\David\source\repos\KaraokeDesktop\obj\Debug\KaraokeDesktop.pdb
+C:\Users\David\source\repos\KaraokeDesktop\bin\Debug\Datos.dll
+C:\Users\David\source\repos\KaraokeDesktop\bin\Debug\Logica.dll
+C:\Users\David\source\repos\KaraokeDesktop\bin\Debug\Datos.pdb
+C:\Users\David\source\repos\KaraokeDesktop\bin\Debug\Logica.pdb
+C:\Users\David\source\repos\KaraokeDesktop\obj\Debug\KaraokeDesktop.Catalogo.resources
+C:\Users\David\source\repos\KaraokeDesktop\obj\Debug\KaraokeDesktop.csproj.CopyComplete

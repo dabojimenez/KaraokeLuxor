@@ -72,5 +72,22 @@ namespace Datos
                 CONEXIONMAESTRA.CerrarBD();
             }
         }
+        public void MOSTRAR_CANCIONES(ref DataTable dt)
+        {
+            try
+            {
+                CONEXIONMAESTRA.AbrirBD();
+                SqlDataAdapter adapter = new SqlDataAdapter("SELECT TOP 50 * FROM CANCIONES", CONEXIONMAESTRA.conectar);
+                adapter.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace);
+            }
+            finally
+            {
+                CONEXIONMAESTRA.CerrarBD();
+            }
+        }
     }
 }

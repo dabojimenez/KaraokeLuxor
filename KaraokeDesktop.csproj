@@ -32,6 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Catalogo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Catalogo.Designer.cs">
+      <DependentUpon>Catalogo.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -52,6 +59,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Catalogo.resx">
+      <DependentUpon>Catalogo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -83,6 +93,40 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="img\CirculoRojo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\azul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\naranja.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\negro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Rojo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\rosa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\verde.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\escobaok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Datos\Datos.csproj">
+      <Project>{3F82C132-3D83-44AE-A625-0B53A00087A0}</Project>
+      <Name>Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="Logica\Logica.csproj">
+      <Project>{A7A42FBC-B00F-4DEA-A8E0-E28A3A16C4CF}</Project>
+      <Name>Logica</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

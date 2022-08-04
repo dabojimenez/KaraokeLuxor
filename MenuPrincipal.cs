@@ -20,5 +20,13 @@ namespace KaraokeDesktop
         {
 
         }
+
+        private void btnCatalogo_Click(object sender, EventArgs e)
+        {
+            pnlPadre.Controls.Clear();
+            Catalogo controlCatalogo = new Catalogo();
+            controlCatalogo.Dock = DockStyle.Fill;
+            pnlPadre.Controls.Add(controlCatalogo);
+        }
     }
 }

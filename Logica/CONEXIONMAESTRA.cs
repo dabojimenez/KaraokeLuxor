@@ -9,8 +9,8 @@ namespace Logica
 {
     public class CONEXIONMAESTRA
     {
-        public static string conexion = @"Data source=DESKTOP-BRSSJE8;Initial Catalogo=KARAOKE;Integrated Security=true;";
-        public static SqlConnection conectar = new SqlConnection();
+        public static string conexion = @"Data source=DESKTOP-BRSSJE8; Initial Catalog=KARAOKE; Integrated Security=true";
+        public static SqlConnection conectar = new SqlConnection(conexion);
         public static void AbrirBD()
         {
             if (conectar.State == ConnectionState.Closed)
