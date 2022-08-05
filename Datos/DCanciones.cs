@@ -53,6 +53,25 @@ namespace Datos
                 CONEXIONMAESTRA.CerrarBD();
             }
         }
+        public bool ELIMINAR_TODAS_CANCIONES()
+        {
+            try
+            {
+                CONEXIONMAESTRA.AbrirBD();
+                SqlCommand cmd = new SqlCommand("DELETE FROM CANCIONES", CONEXIONMAESTRA.conectar);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace);
+                return false;
+            }
+            finally
+            {
+                CONEXIONMAESTRA.CerrarBD();
+            }
+        }
         public void BUSAR_CANCIONES(ref DataTable dt, string Letra)
         {
             try
@@ -83,6 +102,24 @@ namespace Datos
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace);
+            }
+            finally
+            {
+                CONEXIONMAESTRA.CerrarBD();
+            }
+        }
+        public void TOTAL_CANCIONES(ref int TotalCanciones)
+        {
+            try
+            {
+                CONEXIONMAESTRA.AbrirBD();
+                SqlCommand cmd = new SqlCommand("SELECT COUNT(IDCANCION) FROM CANCIONES", CONEXIONMAESTRA.conectar);
+                TotalCanciones = Convert.ToInt32(cmd.ExecuteScalar());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace);
+                TotalCanciones = 0;
             }
             finally
             {

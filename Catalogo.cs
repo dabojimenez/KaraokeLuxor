@@ -15,6 +15,8 @@ namespace KaraokeDesktop
     {
         //Variables globales
         string[] archivos;//Variable para poder almacenar los nombres de los archivos de musica que han sido cargados
+        int totalCanciones;//Variable para almacenar el valor total de las canciones, que se obtendra de la capa de Datos
+        int IdCancion;//Variable para guardar el Id de la Cancion
         public Catalogo()
         {
             InitializeComponent();
@@ -22,7 +24,15 @@ namespace KaraokeDesktop
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            BuscarCancion();
+        }
+        private void BuscarCancion()
+        {
+            DataTable dt = new DataTable();
+            DCanciones canciones = new DCanciones();
+            canciones.BUSAR_CANCIONES(ref dt, txtBuscar.Text);
+            dgvCanciones.DataSource = dt;
+            OcultarColumnas();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -54,6 +64,58 @@ namespace KaraokeDesktop
             DataTable dt = new DataTable();
             dCanciones.MOSTRAR_CANCIONES(ref dt);
             dgvCanciones.DataSource = dt;
+            OcultarColumnas();
+            TotalCanciones();
+        }
+        private void OcultarColumnas()
+        {
+            dgvCanciones.Columns[1].Visible = false;
+        }
+        private void btnEliminarTodo_Click(object sender, EventArgs e)
+        {
+            EliminarTodasCanciones();
+        }
+        private void EliminarTodasCanciones()
+        {
+            DCanciones canciones = new DCanciones();
+            canciones.ELIMINAR_TODAS_CANCIONES();
+            MostrarCanciones();
+        }
+
+        private void Catalogo_Load(object sender, EventArgs e)
+        {
+            MostrarCanciones();
+        }
+        private void TotalCanciones()
+        {
+            DCanciones canciones = new DCanciones();
+            canciones.TOTAL_CANCIONES(ref totalCanciones);
+            lblNumeroCanciones.Text = totalCanciones.ToString();
+        }
+
+        private void dgvCanciones_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //Validamos si los eventos, trae una seleccion del indice de la columna Eliminar, que fue creada en el diseno, si le dio click sobre esa columna
+            //quiere decir que desea eliminar un registro del DataGridView
+            if (e.ColumnIndex == dgvCanciones.Columns["Eliminar"].Index)
+            {
+                DialogResult resultado = MessageBox.Show("Realmente desea Eliminar la Canción?","Eliminar Canción", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (resultado == DialogResult.OK)
+                {
+                    IdCancion = Convert.ToInt32(dgvCanciones.SelectedCells[1].Value);
+                    EliminarCancion();
+                }
+            }
+        }
+        private void EliminarCancion()
+        {
+            LCanciones lCanciones = new LCanciones();
+            DCanciones canciones = new DCanciones();
+            lCanciones.IDCANCION = IdCancion;
+            if (canciones.ELIMINAR_CANCION(lCanciones))
+            {
+                MostrarCanciones();
+            }
         }
     }
 }
